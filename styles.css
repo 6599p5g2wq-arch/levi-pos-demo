@@ -204,3 +204,18 @@ svg{display:block}
 @media(max-width:1400px){
   .stage{align-items:flex-start}
 }
+
+/* Responsive fallbacks for smaller screens (demo only) */
+@media(max-width:1320px){
+  .stage{display:block;padding:18px}
+  .login-window{width:100%;height:auto;max-width:564px;margin:0 auto}
+  .login-card{position:relative;top:auto;right:auto;width:auto;height:auto;max-width:436px;margin:0 auto 26px}
+  .dash-window{width:100%;height:calc(100vh - 36px);min-height:560px;max-width:1264px;margin:0 auto}
+  .sidebar{width:220px;flex-basis:220px}
+}
+@media(max-width:720px){
+  .sidebar{display:none}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .panels{grid-template-columns:1fr}
+  .dash-titlebar .win-title{font-size:10px}
+}
