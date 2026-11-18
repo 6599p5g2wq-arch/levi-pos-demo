@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>لوحة التحكم — LEVI POS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-dashboard" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-pos" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.5 12h11l2-8H6"/></symbol>
+  <symbol id="i-products" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5Z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></symbol>
+  <symbol id="i-inventory" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 16.5 9 5 9-5"/></symbol>
+  <symbol id="i-purchases" viewBox="0 0 24 24"><path d="M3 6h11v10H3z"/><path d="M14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></symbol>
+  <symbol id="i-suppliers" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></symbol>
+  <symbol id="i-customers" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-invoices" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-returns" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></symbol>
+  <symbol id="i-held" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+  <symbol id="i-expenses" viewBox="0 0 24 24"><path d="M3 7h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M3 7V6a2 2 0 0 1 2-2h11"/><circle cx="17" cy="13" r="1.3"/></symbol>
+  <symbol id="i-promotions" viewBox="0 0 24 24"><path d="M20.6 13.4 12 22l-9-9V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.4"/></symbol>
+  <symbol id="i-warranties" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-reports" viewBox="0 0 24 24"><path d="M3 21h18"/><rect x="5" y="12" width="3.5" height="6" rx="1"/><rect x="10.5" y="7" width="3.5" height="11" rx="1"/><rect x="16" y="10" width="3.5" height="8" rx="1"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-audit" viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></symbol>
+  <symbol id="i-backups" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></symbol>
+</svg>
+
+<div class="stage">
+  <div class="dash-window">
+    <div class="dash-titlebar">
+      <div class="win-title"><span class="mini">L</span><span>LEVI POS — لوحة التحكم</span></div>
+      <div class="win-controls">
+        <button class="win-btn close" type="button" aria-label="إغلاق">×</button>
+      </div>
+    </div>
+
+    <div class="dash-body">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">L</div>
+          <div><strong>LEVI POS</strong><span>نظام إدارة المبيعات</span></div>
+        </div>
+
+        <div class="search">
+          <svg class="ic"><use href="#i-search"></use></svg>
+          <input type="search" placeholder="ابحث عن صفحة أو إجراء…" aria-label="بحث في القائمة">
+        </div>
+
+        <nav class="nav">
+          <div class="group-label">العمليات</div>
+          <a href="#" class="active"><svg class="ic"><use href="#i-dashboard"></use></svg><span>لوحة التحكم</span></a>
+          <a href="#"><svg class="ic"><use href="#i-pos"></use></svg><span>نقطة البيع</span></a>
+
+          <div class="group-label">المخزون والمنتجات</div>
+          <a href="#"><svg class="ic"><use href="#i-products"></use></svg><span>المنتجات</span></a>
+          <a href="#"><svg class="ic"><use href="#i-inventory"></use></svg><span>المخزون والجرد</span><span class="badge">4</span></a>
+          <a href="#"><svg class="ic"><use href="#i-purchases"></use></svg><span>المشتريات</span></a>
+          <a href="#"><svg class="ic"><use href="#i-suppliers"></use></svg><span>الموردون</span></a>
+
+          <div class="group-label">المبيعات والعملاء</div>
+          <a href="#"><svg class="ic"><use href="#i-customers"></use></svg><span>العملاء والديون</span></a>
+          <a href="#"><svg class="ic"><use href="#i-invoices"></use></svg><span>الفواتير</span></a>
+          <a href="#"><svg class="ic"><use href="#i-returns"></use></svg><span>المرتجعات</span></a>
+          <a href="#"><svg class="ic"><use href="#i-held"></use></svg><span>الفواتير المعلقة</span><span class="badge">2</span></a>
+
+          <div class="group-label">المالية</div>
+          <a href="#"><svg class="ic"><use href="#i-cash"></use></svg><span>الصندوق والورديات</span><span class="dot"></span></a>
+          <a href="#"><svg class="ic"><use href="#i-expenses"></use></svg><span>المصروفات</span></a>
+          <a href="#"><svg class="ic"><use href="#i-promotions"></use></svg><span>العروض الترويجية</span></a>
+          <a href="#"><svg class="ic"><use href="#i-warranties"></use></svg><span>الضمانات</span></a>
+
+          <div class="group-label">التحليلات والإدارة</div>
+          <a href="#"><svg class="ic"><use href="#i-reports"></use></svg><span>التقارير</span></a>
+          <a href="#"><svg class="ic"><use href="#i-users"></use></svg><span>المستخدمون والصلاحيات</span></a>
+          <a href="#"><svg class="ic"><use href="#i-audit"></use></svg><span>سجل التدقيق</span></a>
+          <a href="#"><svg class="ic"><use href="#i-backups"></use></svg><span>النسخ الاحتياطي</span></a>
+          <a href="#"><svg class="ic"><use href="#i-settings"></use></svg><span>الإعدادات</span></a>
+        </nav>
+
+        <div class="side-foot">
+          <div class="avatar">مد</div>
+          <div class="who"><strong>مدير النظام</strong><span>admin • مدير الصيدلية</span></div>
+          <a href="index.html" aria-label="تسجيل الخروج"><svg class="ic"><use href="#i-logout"></use></svg></a>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <h1>لوحة التحكم</h1>
+            <p>نظرة سريعة على أداء الصيدلية</p>
+          </div>
+          <div class="actions">
+            <button class="btn" type="button"><svg class="ic"><use href="#i-refresh"></use></svg>تحديث</button>
+            <button class="btn primary" type="button"><svg class="ic"><use href="#i-pos"></use></svg>فتح نقطة البيع</button>
+          </div>
+        </header>
+
+        <div class="content">
+          <div class="cards">
+            <div class="card"><span>مبيعات اليوم</span><strong>4,850.00 <i>د.ل</i></strong><em>+12.4% عن أمس</em></div>
+            <div class="card"><span>عدد الفواتير</span><strong>37 <i>فاتورة</i></strong><em>+5 فواتير</em></div>
+            <div class="card amber"><span>متوسط الفاتورة</span><strong>131.08 <i>د.ل</i></strong><em>+2.1%</em></div>
+            <div class="card"><span>صافي ربح اليوم</span><strong>1,120.50 <i>د.ل</i></strong><em>+8.7%</em></div>
+          </div>
+
+          <div class="panels">
+            <div class="panel">
+              <div class="panel-head"><h2><svg class="ic"><use href="#i-reports"></use></svg>المبيعات خلال الأسبوع</h2><span>آخر 7 أيام</span></div>
+              <div class="bars">
+                <div class="bar" style="height:38%"></div>
+                <div class="bar" style="height:55%"></div>
+                <div class="bar" style="height:42%"></div>
+                <div class="bar amber" style="height:68%"></div>
+                <div class="bar" style="height:50%"></div>
+                <div class="bar" style="height:74%"></div>
+                <div class="bar amber" style="height:88%"></div>
+              </div>
+              <div class="bar-labels">
+                <span>السبت</span><span>الأحد</span><span>الاثنين</span><span>الثلاثاء</span><span>الأربعاء</span><span>الخميس</span><span>الجمعة</span>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="panel-head"><h2><svg class="ic"><use href="#i-products"></use></svg>أكثر المنتجات مبيعًا</h2><span>هذا الأسبوع</span></div>
+              <div class="list-row"><div><b>كيبل شحن Type-C</b><small>14 قطعة</small></div><span class="amt">980.00 د.ل</span></div>
+              <div class="list-row"><div><b>سماعة بلوتوث Pro</b><small>9 قطع</small></div><span class="amt">1,845.00 د.ل</span></div>
+              <div class="list-row"><div><b>شاحن سريع 33W</b><small>7 قطع</small></div><span class="amt">665.00 د.ل</span></div>
+              <div class="list-row"><div><b>حامل وترايبود</b><small>18 قطعة</small></div><span class="amt">2,430.00 د.ل</span></div>
+            </div>
+          </div>
+
+          <div class="panel recent">
+            <div class="panel-head"><h2><svg class="ic"><use href="#i-invoices"></use></svg>أحدث الفواتير</h2><span>4 من 37</span></div>
+            <div class="list-row"><div><b>INV-1042 — أحمد المبروك</b><small>اليوم · 12:40 م</small></div><span class="amt">240.00 د.ل <span class="chip">مدفوعة</span></span></div>
+            <div class="list-row"><div><b>INV-1041 — سارة العبيدي</b><small>اليوم · 12:38 م</small></div><span class="amt">85.00 د.ل <span class="chip amber">آجل</span></span></div>
+            <div class="list-row"><div><b>INV-1040 — محمد الفيتوري</b><small>اليوم · 12:35 م</small></div><span class="amt">512.50 د.ل <span class="chip">مدفوعة</span></span></div>
+            <div class="list-row"><div><b>INV-1039 — عميل نقدي</b><small>اليوم · 12:31 م</small></div><span class="amt">45.00 د.ل <span class="chip">مدفوعة</span></span></div>
+          </div>
+
+          <p class="footer-note">LEVI POS 1.1.0 • معاينة ثابتة للواجهة فقط — لا توجد قاعدة بيانات ولا أزرار فعلية</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <p class="demo-note"><a href="index.html"><b>العودة إلى صفحة الدخول</b></a></p>
+</div>
+</body>
+</html>

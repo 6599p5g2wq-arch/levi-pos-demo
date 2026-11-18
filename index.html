@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تسجيل الدخول — LEVI POS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a21.8 21.8 0 0 1 5.06-6.06"/><path d="M9.9 4.24A10.94 10.94 0 0 1 12 4c7 0 11 8 11 8a21.8 21.8 0 0 1-3.22 4.34"/><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M1 1l22 22"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16"/><path d="m13 5 7 7-7 7"/></symbol>
+</svg>
+
+<div class="stage">
+  <div>
+    <div class="login-window">
+      <div class="titlebar">
+        <div class="win-controls">
+          <button class="win-btn close" type="button" aria-label="إغلاق">×</button>
+        </div>
+        <div class="win-title"><span class="mini">L</span><span>LEVI POS</span></div>
+        <div class="win-controls">
+          <button class="win-btn" type="button" aria-label="تصغير">−</button>
+        </div>
+      </div>
+
+      <div class="login-card">
+        <div class="head">
+          <div class="mark"><b>L</b></div>
+          <h1>مرحبًا بعودتك</h1>
+          <p>سجّل الدخول إلى نظام LEVI POS لإدارة الصيدلية</p>
+        </div>
+
+        <form onsubmit="return false">
+          <label class="lbl" for="user">اسم المستخدم</label>
+          <div class="field">
+            <svg class="ic"><use href="#i-user"></use></svg>
+            <input class="input" id="user" type="text" value="admin" autocomplete="off">
+          </div>
+
+          <label class="lbl" for="pass">كلمة المرور</label>
+          <div class="field">
+            <svg class="ic"><use href="#i-lock"></use></svg>
+            <input class="input" id="pass" type="password" value="admin123" autocomplete="off">
+            <button class="eye" type="button" aria-label="إظهار كلمة المرور">
+              <svg class="ic"><use href="#i-eye"></use></svg>
+            </button>
+          </div>
+
+          <div class="row"><a class="link" href="#">نسيت كلمة المرور؟</a></div>
+
+          <a class="submit" href="dashboard.html">
+            <span>تسجيل الدخول</span>
+            <svg class="ic"><use href="#i-arrow"></use></svg>
+          </a>
+        </form>
+
+        <p class="foot"><span>LEVI POS</span> • الإصدار 1.1.0 • نظام محلي آمن</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="demo-note">
+    <b>معاينة ثابتة للواجهة</b> — صفحة الدخول والقائمة ولوحة التحكم فقط، بلا قاعدة بيانات وبلا أزرار فعلية.<br>
+    بيانات العرض: <b>admin</b> / <b>admin123</b> • اضغط «تسجيل الدخول» لمشاهدة لوحة التحكم.
+  </p>
+</div>
+</body>
+</html>
